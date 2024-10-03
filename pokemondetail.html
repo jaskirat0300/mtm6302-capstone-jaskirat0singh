@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Detail</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Logo</div>
+        <nav>
+            <ul>
+                <li>Nav Item 1</li>
+                <li>Nav Item 2</li>
+                <li>Nav Item 3</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="pokemon-detail">
+            <img src="./sampleImage.png" 
+                 alt="Pikachu" class="pokemon-img">
+            <h1>Pikachu</h1>
+            <p><strong>Abilities:</strong> Static, Lightning Rod</p>
+            <p><strong>Types:</strong> Electric</p>
+            <p><strong>Caught:</strong> <span id="caught-status">No</span></p>
+            <div class="button-group">
+                <button class="back-btn" onclick="goBack()">Back</button>
+                <button class="toggle-btn" onclick="toggleCaught()">Toggle Caught</button>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function goBack() {
+            window.history.back(); 
+        }
+
+        function toggleCaught() {
+            const caughtStatus = document.getElementById('caught-status');
+            caughtStatus.textContent = caughtStatus.textContent === 'No' ? 'Yes' : 'No'; 
+        }
+    </script>
+</body>
+</html>
